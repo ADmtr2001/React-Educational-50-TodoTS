@@ -2,6 +2,7 @@ import React, {FC} from 'react';
 
 import {Wrapper} from "./TodoItem.styles";
 import {TodoItemType} from "../../types/todo";
+import {useActions} from "../../hooks/useActions";
 
 interface TodoItemProps {
   item: TodoItemType;
@@ -9,8 +10,14 @@ interface TodoItemProps {
 }
 
 const TodoItem: FC<TodoItemProps> = ({item, number}) => {
+  const {removeItem} = useActions();
+
+  const removeItemHandler = (id: number) => {
+    removeItem(id);
+  }
+
   return (
-    <Wrapper>
+    <Wrapper onClick={() => removeItemHandler(item.id)}>
       {number} - {item.text}
     </Wrapper>
   );
