@@ -1,26 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {Fragment} from 'react';
+import {Routes, Route, Navigate } from "react-router";
+import Start from "./pages/Start";
+import Todo from "./pages/Todo";
+import Navbar from "./components/UI/Navbar/Navbar";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Fragment>
+      <Navbar/>
+      <Routes>
+        <Route path='start' element={<Start/>}/>
+        <Route path='todo' element={<Todo/>}/>
+        <Route path='*' element={<Navigate replace to='/start'/>}/>
+      </Routes>
+    </Fragment>
   );
-}
+};
 
 export default App;
