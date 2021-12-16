@@ -1,5 +1,5 @@
 import React, {Fragment} from 'react';
-import {Routes, Route, Navigate } from "react-router";
+import {Navigate, Route, Routes} from "react-router";
 import Start from "./pages/Start";
 import Todo from "./pages/Todo";
 import Navbar from "./components/UI/Navbar/Navbar";

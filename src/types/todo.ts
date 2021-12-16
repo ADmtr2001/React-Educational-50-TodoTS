@@ -1,6 +1,3 @@
-import todo from "../pages/Todo";
-import Todo from "../pages/Todo";
-
 export interface TodoItemType {
   id: number;
   text: string;

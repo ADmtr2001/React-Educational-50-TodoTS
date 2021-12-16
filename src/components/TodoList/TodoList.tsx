@@ -1,7 +1,6 @@
 import React, {FC} from 'react';
 
 import {Wrapper} from "./TodoList.styles";
-import {TodoItemType} from "../../types/todo";
 import TodoItem from "../TodoItem/TodoItem";
 import {useTypedSelector} from "../../hooks/useTypedSelector";
 
