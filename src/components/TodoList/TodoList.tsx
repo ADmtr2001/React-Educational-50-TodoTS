@@ -3,16 +3,18 @@ import React, {FC} from 'react';
 import {Wrapper} from "./TodoList.styles";
 import {TodoItemType} from "../../types/todo";
 import TodoItem from "../TodoItem/TodoItem";
+import {useTypedSelector} from "../../hooks/useTypedSelector";
 
 interface TodoListProps {
-  items: TodoItemType[];
 }
 
-const TodoList: FC<TodoListProps> = ({items}) => {
+const TodoList: FC<TodoListProps> = () => {
+  const {items} = useTypedSelector(state => state.todo);
+
   return (
     <Wrapper>
-      {items.map(item => (
-        <TodoItem key={item.id} item={item}/>
+      {items.map((item, index) => (
+        <TodoItem key={item.id} number={index + 1}  item={item}/>
       ))}
     </Wrapper>
   );

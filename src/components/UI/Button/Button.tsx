@@ -2,9 +2,20 @@ import React, {FC} from 'react';
 
 import {Wrapper} from "./Button.styles";
 
-const Button: FC = ({children}) => {
+interface ButtonProps {
+  onClickHandler?: () => void;
+}
+
+const Button: FC<ButtonProps> = ({children, onClickHandler = null}) => {
+
+  const clickHandler = (event: React. MouseEvent<HTMLButtonElement>) => {
+    event.preventDefault();
+
+    onClickHandler?.();
+  }
+
   return (
-    <Wrapper>
+    <Wrapper onClick={clickHandler}>
       {children}
     </Wrapper>
   );

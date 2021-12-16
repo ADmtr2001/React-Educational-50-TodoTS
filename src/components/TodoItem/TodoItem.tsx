@@ -5,12 +5,13 @@ import {TodoItemType} from "../../types/todo";
 
 interface TodoItemProps {
   item: TodoItemType;
+  number: number;
 }
 
-const TodoItem: FC<TodoItemProps> = ({item}) => {
+const TodoItem: FC<TodoItemProps> = ({item, number}) => {
   return (
     <Wrapper>
-      {item.id} - {item.text}
+      {number} - {item.text}
     </Wrapper>
   );
 };

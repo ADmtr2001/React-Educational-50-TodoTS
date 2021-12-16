@@ -1,4 +1,5 @@
 import todo from "../pages/Todo";
+import Todo from "../pages/Todo";
 
 export interface TodoItemType {
   id: number;
@@ -19,15 +20,15 @@ export enum TodoActionTypes {
 }
 
 interface AddItemAction {
-  type: string;
+  type: TodoActionTypes.ADD_ITEM;
   payload: TodoItemType;
 };
 
 interface RemoveItemAction {
-  type: string;
+  type: TodoActionTypes.REMOVE_ITEM;
   payload: number;
 };
 
 interface RemoveAllItemsActions {
-  type: string;
+  type: TodoActionTypes.REMOVE_ALL_ITEMS;
 }
