@@ -1,10 +1,16 @@
-import React from 'react';
+import React, {FC} from 'react';
 
-const Start = () => {
+import {Wrapper} from "./Start.styles";
+import Button from "../components/UI/Button/Button";
+import {Link} from "react-router-dom";
+
+const Start: FC = () => {
   return (
-    <div>
-      Start
-    </div>
+    <Wrapper>
+      <Link to='/todo'>
+        <Button>Let's Go!</Button>
+      </Link>
+    </Wrapper>
   );
 };
 

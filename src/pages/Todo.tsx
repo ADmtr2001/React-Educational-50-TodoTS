@@ -1,10 +1,12 @@
-import React from 'react';
+import React, {FC} from 'react';
 
-const Todo = () => {
+import {Wrapper} from "./Todo.styles";
+
+const Todo: FC = () => {
   return (
-    <div>
+    <Wrapper>
       Todo
-    </div>
+    </Wrapper>
   );
 };
 

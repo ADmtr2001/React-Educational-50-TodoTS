@@ -8,13 +8,6 @@ export const Wrapper = styled.nav`
   justify-content: center;
   
   a {
-    background-color: gray;
-    width: 100px;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
     margin-right: 10px;
   }
 `;
