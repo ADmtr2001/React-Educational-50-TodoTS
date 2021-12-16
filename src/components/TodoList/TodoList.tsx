@@ -1,10 +1,11 @@
 import React, {FC} from 'react';
 
 import {Wrapper} from "./TodoList.styles";
+import {TodoItemType} from "../../types/todo";
 import TodoItem from "../TodoItem/TodoItem";
 
 interface TodoListProps {
-  items: any[]
+  items: TodoItemType[];
 }
 
 const TodoList: FC<TodoListProps> = ({items}) => {

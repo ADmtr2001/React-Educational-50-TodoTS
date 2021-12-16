@@ -1,9 +1,10 @@
 import React, {FC} from 'react';
 
 import {Wrapper} from "./TodoItem.styles";
+import {TodoItemType} from "../../types/todo";
 
 interface TodoItemProps {
-  item: any;
+  item: TodoItemType;
 }
 
 const TodoItem: FC<TodoItemProps> = ({item}) => {
