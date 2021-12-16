@@ -9,6 +9,7 @@ export const Wrapper = styled.button`
   font-weight: bold;
   font-size: 1rem;
   letter-spacing: 2px;
+  margin-top: 30px;
   
   :hover {
     color: cornflowerblue;

@@ -8,7 +8,7 @@ const Start: FC = () => {
   return (
     <Wrapper>
       <Link to='/todo'>
-        <Button>Let's Go!</Button>
+        Let's Go!
       </Link>
     </Wrapper>
   );

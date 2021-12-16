@@ -13,4 +13,8 @@ export const Wrapper = styled.form`
     padding: 5px;
     border: 2px solid cornflowerblue;
   }
+  
+  button {
+    margin-top: 0;
+  }
 `;

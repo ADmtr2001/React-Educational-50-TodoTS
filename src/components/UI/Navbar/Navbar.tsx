@@ -8,10 +8,10 @@ const Navbar: FC = () => {
   return (
     <Wrapper>
       <Link to='start'>
-        <Button>Start</Button>
+        Start
       </Link>
       <Link to='todo'>
-        <Button>Todo</Button>
+        Todo
       </Link>
     </Wrapper>
   );

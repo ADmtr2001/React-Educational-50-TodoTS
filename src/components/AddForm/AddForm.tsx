@@ -9,6 +9,8 @@ const AddForm = () => {
   const {addItem} = useActions();
 
   const addItemHandler = () => {
+    if (text.trim().length === 0) return;
+
     addItem({id: Date.now(), text, finished: false});
     setText('');
   }
